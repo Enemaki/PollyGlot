@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <title>POLLYGLOT</title>
+        <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div id="head1">
+                    <img src="./assets/parrot.png" alt="A flying parrot" id="parrot" class="head">
+                </div>
+                <div id="head2" class="head">
+                    <h1>PollyGlot</h1>
+                    <p>Perfect Translation Every Time</p>
+                </div>
+            </div>
+        </header>
+        <div class="result-div">
+            <div class="main-container">
+                <p id="instruction1" class="instruction">Text to translate 👇</p>
+                <input type="text" id="lang-input">
+                <p id="instruction2" class="instruction">Select language 👇</p>
+                <form id="lang-form">
+                    <div class="form-div">
+                        <div class="rad">
+                            <input type="radio" id="french" name="language" value="FRENCH">
+                            <label for="french">French</label>
+                            <img src="./assets/fr-flag.png" alt="french flag" class="flag">
+                        </div>
+                        <div class="rad">
+                            <input type="radio" id="spanish" name="language" value="SPANISH">
+                            <label for="spanish">Spanish</label>
+                            <img src="./assets/sp-flag.png" alt="spanish flag" class="flag">
+                        </div>
+                        <div class="rad">
+                            <input type="radio" id="japanese" name="language" value="JAPANESE">
+                            <label for="japanese">Japanese</label>
+                            <img src="./assets/jpn-flag.png" alt="japanese flag" class="flag">
+                        </div>     
+                    </div>
+                </form>
+                <button id="translate-btn">Translate</button>
+            </div>
+        </div>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>

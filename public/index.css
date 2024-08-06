@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: url("./assets/worldmap.png");
+    height: 150px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#parrot {
+    height: 84.8px;
+    width: 94.88px;
+}
+
+#head1 {
+    margin: 0 20px;
+}
+
+.head {
+    margin-top: 20px;
+}
+
+#head2 p {
+    margin-top: -20px;
+    color: white;
+    font-family: 'poppins';
+    font-weight: bold;
+    font-size: 12.21px;
+}
+
+#head2 h1 {
+    color: #32CD32;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.result-div {
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    border: #252F42 3px solid;
+    width: 600px;
+    height: 440px;
+    margin: 20px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+.instruction {
+    color: #035A9D;
+    font-family: 'poppins';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#lang-input {
+    height: 100px;
+    width: 300px;
+    background: #EFF0F4;
+    font-weight: bold;
+    font-family: 'poppins';
+    border-radius: 10px;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.rad {
+    margin: 5px;
+}
+
+button {
+    background: #035A9D;
+    font-family: 'poppins';
+    color: white;
+    margin: 20px;
+    height: 30px;
+    width: 300px;
+}
+
+.ans {
+    height: 100px;
+    width: 300px;
+    background: #EFF0F4;
+    font-weight: bold;
+    font-family: 'poppins';
+    border: none;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.innerans {
+    margin: 5px;
+}
