@@ -23,7 +23,7 @@ app.listen(port, function() {
 })
 
 async function translate(phrase, language) {
-    const prompt = `You are a ${language} language translator. Given a phrase or sentence in english translate it to ${language} language exactly. There is no need for any extra information just the translation`
+    const prompt = `You are a ${language} language translator. Given a word, phrase or sentence in english translate it to ${language} language exactly. There is no need for any extra information just the translation`
     const required = phrase
     const result = await model.generateContent([prompt, required])
     return result.response.text()
