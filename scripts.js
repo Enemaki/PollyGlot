@@ -23,8 +23,30 @@ app.listen(port, function() {
 })
 
 async function translate(phrase, language) {
-    const prompt = `You are a ${language} language translator. Given a word, phrase or sentence in english translate it to ${language} language exactly. There is no need for any extra information just the translation`
-    const required = phrase
-    const result = await model.generateContent([prompt, required])
+    const chat = model.startChat({
+        history: [
+          {
+            role: "user",
+            parts: [{ text: phrase }],
+          },
+          {
+            role: "model",
+            parts: [{ text: `You are an experienced language translator 
+                and you can translate various sentences 
+                in different languages correctly, 
+                give me just the answer to the translation and 
+                how to pronounce the text, also add a comma to the 
+                word before giving me the translation and 
+                include the pronunciation in parenthesis, 
+                do not add extra text` }],
+          },
+        ],
+        generationConfig: {
+            maxOutputTokens: 120,
+            temperature: 0.5,
+          },
+      })
+    const prompt = `Translate this ${phrase} in ${language}`
+    const result = await chat.sendMessage(prompt)
     return result.response.text()
 }
